@@ -1,5 +1,12 @@
 # jQuery.xarea
 
-jQuery plugin for expandable `<textarea>`
+jQuery plugin for vertically expanding `<textarea>`.
 
-(TBD.)
+For more details and demo, check the [project page](http://github.com/Xion/jQuery.xarea).
+
+---
+
+Released under BSD license.
+
+Special thanks to Jan Miksovsky for [the original StackOverflow answer](http://stackoverflow.com/a/2032642/434799)
+that inspired me to write this plugin!
