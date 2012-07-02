@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>jQuery.xarea :: demo</title>
+
+        <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+        <style>
+            body {
+                font-size: 15px;
+                line-height: 1.5em;
+            }
+            footer {
+                text-align: right;
+                margin-top: 30px;
+                margin-right: 15px;
+                margin-bottom: 20px;
+                font-size: small;
+                color: gray;
+            }
+        </style>
+
+        <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+        <script src="../jquery.xarea.js"></script>
+        <script>
+            $(document).ready(function() {
+                $('textarea').xarea();
+                $('#lipsum').click(function() {
+                    var $textarea = $(this).parent().find('textarea');
+                    $textarea.val($textarea.val()
+                        + "\nLorem ipsum dolor sit amet, consectetur adipiscing elit. "
+                        + "Cras nec commodo tortor. Integer pulvinar, eros sit amet blandit lobortis, "
+                        + "purus mi semper nibh, non bibendum enim erat quis orci. "
+                        + "Cras placerat faucibus risus a dignissim. Fusce in leo elit, sit amet dictum nunc."
+                    ).change();
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <a href="http://github.com/Xion/jQuery.xarea">
+            <img class="pull-right" src="img/github-fork.png">
+        </a>
+        <div class="row">
+            <div class="offset4 span8">
+                <div class="page-header">
+                    <h1>jQuery.xarea <small>steadily growing</small<></h1>
+                </div>
+
+                <h2>What's this?</h2>
+                <p>It's a small jQuery plugin for expandable <code>&lt;textarea&gt;</code>.</p>
+                <p>In other words, it's a multi-line textbox that grows automatically,
+                    increasing its height as user types more and more text into it.</p>
+                <p align="center"><img src="img/facebook-comment.png" alt=""></p>
+                <p>Yeah, just like comment field on Facebook.</p>
+
+                <h2>Can I try it?</h2>
+                <p>Why, sure! Here's a textbox that should demonstrate it well enough:</p>
+                <div>
+                    <textarea class="span6" style="height: 2em"
+                        placeholder="Fill me with few rows..."></textarea>
+                    <button id="lipsum" class="btn btn-primary pull-right" style="margin-top: 8px">
+                        I don't like typing...
+                    </button>
+                    <div style="clear:both"></div>
+                </div>
+
+                <h2>And how would I use it?</h2>
+                <p>Include <i>jquery.xarea.js</i> after <a href="http://jquery.com">jQuery</a>:</p>
+<pre>
+&lt;script src="jquery.xarea.js">&lt;/script>
+</pre>
+                <p>and call <code>xarea()</code> on any <code>&lt;textarea&gt;</code> elements
+                    you want to make expandable:</p>
+<pre>
+&lt;script>
+    $(document).ready(function() {
+        $('textarea').xarea();
+    });
+&lt;script>
+</pre>
+                <p class="alert alert-info">
+                    <code>xarea()</code> will take the box' initial height and set it as <code>min-height</code>
+                    so that it won't shrink to nothingness should it go empty.
+                </p>
+
+                <h2>Neat! Where can I get it?</h2>
+                <p>Head over to <a href="http://github.com/Xion/jQuery.xarea">GitHub</a> to grab a copy.
+                    And by the way, it's free for all intent and purposes!</p>
+            </div>
+        </div>
+        <footer class="offset4 span8">
+            made by Xion &raquo;
+                <a href="http://xion.io">blog</a>
+                <a href="http://github.com/Xion">github</a>
+                <a href="http://twitter.com/Xion__">twitter</a>
+        </footer>
+    </body>
+</html>
