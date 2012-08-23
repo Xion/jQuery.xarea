@@ -15,7 +15,7 @@
                 var autosize = setupAutosize(markup);
                 autosize();
             });
-        },
+        }
     });
     
     var setupMarkup = function($textarea) {
@@ -28,12 +28,13 @@
             fontFamily:     $textarea.css('font-family'),
             fontSize:       $textarea.css('font-size'),
             fontWeight:     $textarea.css('font-weight'),
-            lineHeight:     $textarea.css('line-height'),
+            lineHeight:     $textarea.css('line-height')
         });
         setCss($mimic, 'box-sizing', 'border-box');
         $mimic.css('min-height', $textarea.outerHeight());
         $mimic.css('padding', $textarea.css('padding'));
         $mimic.css('padding-bottom', '0.7em');
+        $mimic.css('border', $textarea.css('border'));
         $mimic.css('width', '100%');
         $mimic.css('visibility', 'hidden'); // not display:none as we want the layouting
         
@@ -43,7 +44,7 @@
             width:      '100%',
             height:     '100%',
             overflow:   'hidden',
-            position:   'absolute',
+            position:   'absolute'
         });
         
         // replace it with container
@@ -81,9 +82,9 @@
    };
    
    var htmlEscape = function(str) {
-       return str.replace(/</g, '&lt;')
+       return str.replace(/&/g, '&amp;')
+                 .replace(/</g, '&lt;')
                  .replace(/>/g, '&gt;')
-                 .replace(/&/g, '&amp;')
                  .replace(/\n$/, '<br/>&nbsp;')
                  .replace(/\n/g, '<br/>')
                  .replace(/ {2,}/g, function(spaces) {
