@@ -15,7 +15,7 @@
                 var autosize = setupAutosize(markup);
                 autosize();
             });
-        },
+        }
     });
     
     var setupMarkup = function($textarea) {
@@ -28,7 +28,7 @@
             fontFamily:     $textarea.css('font-family'),
             fontSize:       $textarea.css('font-size'),
             fontWeight:     $textarea.css('font-weight'),
-            lineHeight:     $textarea.css('line-height'),
+            lineHeight:     $textarea.css('line-height')
         });
         setCss($mimic, 'box-sizing', 'border-box');
         $mimic.css('min-height', $textarea.outerHeight());
@@ -43,7 +43,7 @@
             width:      '100%',
             height:     '100%',
             overflow:   'hidden',
-            position:   'absolute',
+            position:   'absolute'
         });
         
         // replace it with container
