@@ -82,9 +82,9 @@
    };
    
    var htmlEscape = function(str) {
-       return str.replace(/</g, '&lt;')
+       return str.replace(/&/g, '&amp;')
+                 .replace(/</g, '&lt;')
                  .replace(/>/g, '&gt;')
-                 .replace(/&/g, '&amp;')
                  .replace(/\n$/, '<br/>&nbsp;')
                  .replace(/\n/g, '<br/>')
                  .replace(/ {2,}/g, function(spaces) {
