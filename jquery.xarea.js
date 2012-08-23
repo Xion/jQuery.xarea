@@ -34,6 +34,7 @@
         $mimic.css('min-height', $textarea.outerHeight());
         $mimic.css('padding', $textarea.css('padding'));
         $mimic.css('padding-bottom', '0.7em');
+        $mimic.css('border', $textarea.css('border'));
         $mimic.css('width', '100%');
         $mimic.css('visibility', 'hidden'); // not display:none as we want the layouting
         
