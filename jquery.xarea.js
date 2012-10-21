@@ -32,6 +32,7 @@
         });
         setCss($mimic, 'box-sizing', 'border-box');
         $mimic.css('min-height', $textarea.outerHeight());
+        $mimic.css('margin', $textarea.css('margin'));
         $mimic.css('padding', $textarea.css('padding'));
         $mimic.css('padding-bottom', '0.7em');
         $mimic.css('border', $textarea.css('border'));
