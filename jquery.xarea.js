@@ -94,9 +94,7 @@
    };
    
    var repeat = function(str, count) {
-        for (var i = 0, r = ''; i < count; i ++)
-            r += str;
-        return r;
+       return new Array(count + 1).join(str);
    };
    
 })(jQuery);
