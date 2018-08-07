@@ -64,7 +64,7 @@
         markup.$textarea.css('resize', 'none'); // no manual sizing
         
         var autosize = function() {
-            var text = htmlEscape(markup.$textarea.val());
+            var text = htmlEscape(markup.$textarea.val()) + '&#8203;';
             markup.$mimic.html(text);
         };
         markup.$textarea.on('change keydown keyup', autosize);
